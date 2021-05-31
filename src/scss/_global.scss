@@ -1,0 +1,169 @@
+.main_section{
+    .container{
+        display: flex;
+        .global_left_content{
+            font-family: 'Karla', sans-serif;
+            width: 20%;
+            padding: 3rem 1rem;
+            .like_content{
+                font-family: 'Karla', sans-serif;
+            
+                .like_card{
+                    margin-bottom: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1rem;
+                    font-weight: 600;
+
+                    .like_pseudo{
+                        font-weight: 300;
+                        font-size: 1.3rem;
+                    }
+                    .like_message{
+
+                    }
+                    .like_number{
+                        display: flex;
+                        img{
+                            margin-right: .5rem;
+                            width: 10px;
+                        } 
+                    }
+                }
+            }
+            .author_content{
+                margin-top: 1rem;
+                font-family: 'Karla', sans-serif;
+
+                .author_box{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+                    gap: 5px 10px;
+                    .author_card{
+
+                        margin-bottom: 1rem;
+                        .author_pseudo{
+                            font-weight: 300;
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+            .words_content{
+                margin-top: 3rem;
+                font-family: 'Karla', sans-serif;
+                .words_box{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+                    gap: 5px 10px;
+                }
+
+                .words_card{
+                    .words_display{
+                        font-weight: 300;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+        .global_right_content{
+            font-family: 'Karla', sans-serif;
+            width: 80%;
+            padding: 3rem 1rem;
+            .touit_content{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 20px;
+
+                
+
+                .touit{
+                    position: relative;
+                    width: 20rem;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1rem;
+                    border-radius: 15px;box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.12);
+
+                    p{
+                        font-family: 'Karla', sans-serif;
+                    }
+
+                    .touit_pseudo{
+                        font-weight: 600;
+                        font-size: 2rem;
+                    }
+
+                    .touit_pseudo::before{
+                        content:'@ ';
+                    }
+
+                    .touit_message{
+                        font-weight: 300;
+                        font-size: 1.8rem;
+                        max-height: 15rem;
+                        overflow-y: auto;
+                        overflow-x: hidden;
+                        scrollbar-color: transparent;
+                        scrollbar-width: thin;
+                        margin-bottom: 6rem;
+                        margin-top: .5rem;
+                    }
+
+                    .touit_icone_box{
+                        position: absolute;
+                        bottom: 3.5rem;
+                        right: 0;
+                        margin-top: 1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        .like{
+                            width: 3.7rem;
+                            background-color: white;
+                            border: none;
+                        }
+    
+                        .comment{
+                            width: 3.7rem;
+                            background-color: white;
+                            border: none;
+                        }
+                        .close{
+                            width: 3.7rem;
+                            background-color: white;
+                            border: none;
+                        }
+                    }
+
+                    .modalBox{
+                        width: 10rem;
+                        height: 20rem;
+                        display: flex;
+                        justify-content: center;
+                        position: absolute;
+                        background-color: red;
+                        z-index: 9999;
+                        .commentContent{
+
+                        }
+                    }
+
+                    .touit_date_box{
+                        position: absolute;
+                        bottom: .5rem;
+                        right: 1rem;
+                        display: flex;
+                        justify-content: flex-end;
+                        .dateContent{
+                            margin-top: 2rem;
+                            font-weight: 300;
+                            font-style: italic;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

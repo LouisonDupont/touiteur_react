@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Header from "./components/Header";
+import SendMessageForm from "./components/SendMessageForm";
+import TouitContainer from "./components/TouitContainer";
+import './scss/_global.scss';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    render() {
+      return (
+        <div className="App">
+          <Header />
+          <SendMessageForm />
+          <section className="main_section">
+                <div className="container">
+                    <div className="global_left_content">
+                      <div className="like_content">
+                        <h2>Most liked</h2>
+                          {/* <MostLiked /> */}
+                      </div>
+                      <div className="author_content">
+                        <h2>Best author</h2>
+                        <div className="author_box">
+                          {/* <BestAuthor /> */}
+                        </div>
+                      </div>
+                      <div className="words_content">
+                        <h2>Words Champions</h2>
+                          <div className="words_box">
+                            {/* <WordsChampions /> */}
+                          </div>
+                      </div>
+                    </div>
+                    <div className="global_right_content">
+                      <h2>Last touits</h2>
+                      <TouitContainer />
+                    </div>
+                </div>
+          </section>      
+        </div>
+    );
+    }
 }
-
 export default App;
